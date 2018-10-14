@@ -1,1 +1,121 @@
-RadMap soon in your neighborhood!
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>RadMap software</title>
+    <meta name="keywords" content="radiation, detection, dose calculation">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./style.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600|Raleway:400,700" rel="stylesheet">
+  </head>
+  <body>
+
+    <section class="navbar">
+      <img src="./logo.png" alt="RadMap logo" />
+      <div class="text">
+        <label for="hamburger" class="con">
+          <div id="hamburger-container" onclick="toggleRotation()">
+            <div class="bar top"></div>
+            <div class="bar middle"></div>
+            <div class="bar bottom"></div>
+          </div>
+        </label>
+        <input id="hamburger" type="checkbox" class="hamburger-checkbox" />
+        <div class="menu">
+          <a href="#introduction">Overview</a>
+          <a href="#workflow">Workflow</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="header">
+      <h1>Welcome to<br/><span class="orange">RadMap</span></h1>
+      <h2>A desktop app for dose rate calculations</h2>
+      <p><em>current version Beta 0.9</em></p>
+      <div class="taglines">
+        <button type="button"><h3>DOWLOAD RadMap for Windows</h3></button>
+        <h3>Install and try with limited performance. You'll be up and running in minutes!</h3>
+        <h3>Like what you see? Obtain a free, time-limited license for full performance</h3>
+      </div>
+    </section>
+
+    <section id="introduction">
+      <h2>What is RadMap?</h2>
+      <div class="line"></div>
+      <p>
+        RadMap is a desktop application that simulates radiation transport in matter.
+        RadMap allows you to calculate external dose inflicted by photons to a person in a
+        customizable environment. RadMap uses a full Monte Carlo algorithm that runs on all
+        cores of your computer in parallel to deliver the result as quickly as possible.
+      </p>
+    </section>
+
+    <section id="workflow">
+      <h2>The RadMap workflow</h2>
+      <div class="line"></div>
+      <p>Calculate dose in five easy steps:</p>
+      <h5>1. CUSTOMIZE YOUR ENVIRONMENT</h5>
+      <p>What does the environment look like? The RadMap interface lets you build the environment
+      by placing boxes, cylinders and tubes of different materials in a virtual world.
+      <br/>
+      Do you need a special material? No problem. RadMap lets you design your own materials and
+      compunds if you cannot find what you need among the hundreds of predefined materials in
+      the RadMap materials data base.</p>
+      <h5>2. Place sources</h5>
+      <p>What parts of the environment are radioactive? Assign one or more of several hundreds of
+      pre-defined radiactive isotopes to some of the building blocks of your environment. Set the
+      activity of the sources in a suitable unit.</p>
+      <h5>3. Place dose maps</h5>
+      <p>In what parts of the environment would you like to know the dose rate? Place dosemaps in
+      these locations. The dose map registers the flux of gamma radiation through these
+      locations and converts the flux to dose rate.</p>
+      <h5>4. Simulate!</h5>
+      <p>Do you want a quick calculation with a rough estimate of the dose rates or do you want a
+      slower more accurate calculation? Select the number of primary decays you wish to simulate.
+      <br />
+      The more decays the longer simulation but the better precision in the result. Hit the
+      Simulate button!</p>
+      <h5>5. Collect the results</h5>
+      <p>The simulation is done! Browse through the dose maps and se the registered dose rate
+      presented with the statistical uncertainty. Export the result as a PDF.</p>
+    </section>
+
+    <section id="faq">
+      <h2>FAQ</h2>
+      <div class="line"></div>
+      <br/>
+      <h6>How do I get a time-limited license?</h6>
+      <p>Through the RadMap interface you can generate an installation-specific file that you send to
+      us. Follow the instructions in the user manual.</p><br/>
+
+      <h6>Why is the installer zip file so large?</h6>
+      <p>To accurately simulate radiation, RadMap requires information of a lage amount of particle
+      interactions, material properties and radioactive sources. This data takes up a lot of space.
+      The exectables make up only a small fraction of the size.</p><br/>
+
+      <h6>Why are there two installers?</h6>
+      <p>Radmap consists of two parts: a client GUI and a calculation server. We keep these in separate
+      installers since the server contains all the data and takes a bit of time to install.</p><br/>
+
+      <h6>Why is the installation path hardcoded to C:\RadMap?</h6>
+      <p>The server needs read and write access to its installation folder and sub-folders. Since
+      RadMap is currently in a Beta state we want to help our partners as quickly as possible with
+      trouble shooting and bug-fixing. This is much easier if we know where to find the installation.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="line"></div>
+      <p>Don't hesitate to contact us through info@radmap.tech!</p>
+    </section>
+
+    <script>
+    const toggleRotation = () => {
+       document.getElementById("hamburger-container").classList.toggle("rotate")
+     }
+   </script>
+
+  </body>
+</html>
