@@ -2,6 +2,7 @@
 body {
   margin: 0px;
   box-sizing: border-box;
+  background-color: white;
 }
 
 h1 {
@@ -41,15 +42,25 @@ p {
   line-height: 1.5;
 }
 
+a {
+   text-decoration: none;
+   color: black;
+}
+
 li {
   list-style-type: none;
 }
 
 button {
-  background-color: white;
+  background-color: #dcdcdc;
   border: 1px solid #cc5500;
   border-radius: 15px;
   padding: 0px 15px;
+  cursor: pointer;
+}
+
+button:focus {
+    outline: 0;
 }
 
 button h3 {
@@ -59,6 +70,10 @@ button h3 {
 button:hover {
   background-color: #cc5500;
   color: white;
+}
+
+button:hover a {
+    color: white;
 }
 
 .orange {
@@ -116,11 +131,10 @@ button:hover {
 
 
 .header {
-  background-image: linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0.95), rgba(255,255,255,0.4)), url("./radiationtracks.png");
+  background-image: linear-gradient(to right, rgba(220,220,220,1), rgba(220,220,220,0.95), rgba(220,220,220,0.4)), url("./radiationtracks.png");
   background-size: cover;
   padding: 150px 10%;
   height: calc(100vh - 250px);
-  border-bottom: 2px solid black;
 }
 
 .taglines {
