@@ -220,6 +220,10 @@ button:hover a {
     background-color: black;
   }
 
+  .header {
+    height: auto;
+  }
+
   #introduction, #workflow, #faq, #contact {
     padding: 40px 5%;
     margin: 0px;
