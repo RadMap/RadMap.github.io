@@ -141,8 +141,13 @@ button:hover a {
   padding-top: 50px;
 }
 
-#introduction, #workflow, #faq, #contact {
-  padding: 40px 20%;
+#introduction {
+  padding: 40px 20% 20px 20%;
+  margin: 0px;
+}
+
+#workflow, #faq, #contact {
+  padding: 20px 20%;
   margin: 0px;
 }
 
