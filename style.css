@@ -53,8 +53,7 @@ li {
 
 button {
   background-color: rgba(0,0,0,0);
-  /* background-color: #dcdcdc; */
-  border: 1px solid #cc5500;
+  border: 1px solid #e85a4f;
   border-radius: 15px;
   padding: 0px 15px;
   cursor: pointer;
@@ -69,7 +68,7 @@ button h3 {
 }
 
 button:hover {
-  background-color: #cc5500;
+  background-color: #e85a4f;
   color: white;
 }
 
@@ -78,7 +77,7 @@ button:hover a {
 }
 
 .orange {
-  color: #cc5500;
+  color: #e85a4f;
 }
 
 .navbar {
@@ -132,7 +131,7 @@ button:hover a {
 
 
 .header {
-  background-image: linear-gradient(to right, rgba(220,220,220,1), rgba(220,220,220,0.95), rgba(220,220,220,0.4)), url("./radiationtracks.png");
+  background-image: linear-gradient(to right, rgba(234, 231, 220, 1), rgba(234, 231, 220, 0.85), rgba(234, 231, 220, 0.4)), url("./radiationtracks.png");
   background-size: cover;
   padding: 150px 10%;
   height: calc(100vh - 250px);
@@ -155,7 +154,7 @@ button:hover a {
 .line {
   width: 150px;
   height: 1px;
-  border-bottom: 3px solid #cc5500;
+  border-bottom: 3px solid #e85a4f;
   margin-bottom: 5px;
   margin-top: -10px;
 }
