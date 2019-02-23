@@ -52,7 +52,8 @@ li {
 }
 
 button {
-  background-color: #dcdcdc;
+  background-color: rgba(0,0,0,0);
+  /* background-color: #dcdcdc; */
   border: 1px solid #cc5500;
   border-radius: 15px;
   padding: 0px 15px;
