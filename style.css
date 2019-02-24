@@ -84,7 +84,7 @@ button:hover a {
   width: 100%;
   position: fixed;
   top: 0;
-  background-color: black;
+  background-color: #303030;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -93,8 +93,8 @@ button:hover a {
 .navbar img {
   height: 50px;
   object-fit: contain;
-  align-self: flex-start;
-  padding: 0px 1%;
+  align-self: center;
+  padding: 0px 10px;
   display: inline;
 }
 
@@ -121,7 +121,7 @@ button:hover a {
 }
 
 .menu a {
-  color: white;
+  color: #FFFFFF;
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   display: inline;
@@ -129,6 +129,9 @@ button:hover a {
   text-decoration: none;
 }
 
+.menu a:hover {
+  color: #e85a4f;
+}
 
 .header {
   background-image: linear-gradient(to right, rgba(234, 231, 220, 1), rgba(234, 231, 220, 0.85), rgba(234, 231, 220, 0.4)), url("./radiationtracks.png");
@@ -141,14 +144,14 @@ button:hover a {
   padding-top: 50px;
 }
 
-#introduction {
+#overview {
   padding: 40px 20% 20px 20%;
-  margin: 0px;
+  margin: 0px 0px -20px 0px;
 }
 
 #workflow, #faq, #contact {
-  padding: 20px 20%;
-  margin: 0px;
+  padding: 40px 20% 0px 20%;
+  margin: 0px 0px -20px 0px;
 }
 
 .line {
@@ -229,7 +232,7 @@ button:hover a {
     height: auto;
   }
 
-  #introduction, #workflow, #faq, #contact {
+  #overview, #workflow, #faq, #contact {
     padding: 40px 5%;
     margin: 0px;
   }
