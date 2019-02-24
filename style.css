@@ -52,8 +52,8 @@ li {
 }
 
 button {
-  background-color: #dcdcdc;
-  border: 1px solid #cc5500;
+  background-color: rgba(0,0,0,0);
+  border: 1px solid #e85a4f;
   border-radius: 15px;
   padding: 0px 15px;
   cursor: pointer;
@@ -68,7 +68,7 @@ button h3 {
 }
 
 button:hover {
-  background-color: #cc5500;
+  background-color: #e85a4f;
   color: white;
 }
 
@@ -77,14 +77,14 @@ button:hover a {
 }
 
 .orange {
-  color: #cc5500;
+  color: #e85a4f;
 }
 
 .navbar {
   width: 100%;
   position: fixed;
   top: 0;
-  background-color: black;
+  background-color: #303030;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -93,8 +93,8 @@ button:hover a {
 .navbar img {
   height: 50px;
   object-fit: contain;
-  align-self: flex-start;
-  padding: 0px 1%;
+  align-self: center;
+  padding: 0px 10px;
   display: inline;
 }
 
@@ -121,7 +121,7 @@ button:hover a {
 }
 
 .menu a {
-  color: white;
+  color: #FFFFFF;
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   display: inline;
@@ -129,9 +129,12 @@ button:hover a {
   text-decoration: none;
 }
 
+.menu a:hover {
+  color: #e85a4f;
+}
 
 .header {
-  background-image: linear-gradient(to right, rgba(220,220,220,1), rgba(220,220,220,0.95), rgba(220,220,220,0.4)), url("./radiationtracks.png");
+  background-image: linear-gradient(to right, rgba(234, 231, 220, 1), rgba(234, 231, 220, 0.85), rgba(234, 231, 220, 0.4)), url("./radiationtracks.png");
   background-size: cover;
   padding: 150px 10%;
   height: calc(100vh - 250px);
@@ -141,15 +144,24 @@ button:hover a {
   padding-top: 50px;
 }
 
-#introduction, #workflow, #faq, #contact {
-  padding: 40px 20%;
-  margin: 0px;
+#overview {
+  padding: 50px 20% 0px 20%;
+  margin: 0px 0px -30px 0px;
+}
+
+#workflow, #faq {
+  padding: 50px 20% 0px 20%;
+  margin: 0px 0px -30px 0px;
+}
+
+#contact {
+  padding: 50px 20% 30px 20%;
 }
 
 .line {
   width: 150px;
   height: 1px;
-  border-bottom: 3px solid #cc5500;
+  border-bottom: 3px solid #e85a4f;
   margin-bottom: 5px;
   margin-top: -10px;
 }
@@ -224,7 +236,7 @@ button:hover a {
     height: auto;
   }
 
-  #introduction, #workflow, #faq, #contact {
+  #overview, #workflow, #faq, #contact {
     padding: 40px 5%;
     margin: 0px;
   }
