@@ -145,13 +145,17 @@ button:hover a {
 }
 
 #overview {
-  padding: 40px 20% 20px 20%;
-  margin: 0px 0px -20px 0px;
+  padding: 50px 20% 0px 20%;
+  margin: 0px 0px -30px 0px;
 }
 
-#workflow, #faq, #contact {
-  padding: 40px 20% 0px 20%;
-  margin: 0px 0px -20px 0px;
+#workflow, #faq {
+  padding: 50px 20% 0px 20%;
+  margin: 0px 0px -30px 0px;
+}
+
+#contact {
+  padding: 50px 20% 30px 20%;
 }
 
 .line {
