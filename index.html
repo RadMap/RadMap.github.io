@@ -5,6 +5,7 @@
     <title>RadMap software</title>
     <meta name="keywords" content="radiation, detection, dose calculation">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="./favicon.png"/>
     <link href="./style.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600|Raleway:400,700" rel="stylesheet">
     <script src="./index.js" type="text/javascript"></script>
@@ -13,20 +14,17 @@
 
     <section class="navbar">
       <img src="./logo.png" alt="RadMap logo" />
-      <div class="text">
-        <label for="hamburger" class="con">
-          <div id="hamburger-container" onclick="toggleRotation()">
-            <div class="bar top"></div>
-            <div class="bar middle"></div>
-            <div class="bar bottom"></div>
-          </div>
-        </label>
-        <input id="hamburger" type="checkbox" class="hamburger-checkbox" />
-        <div class="menu">
+      <div class="text" onclick="toggleNavbar()">
+        <div id="menu">
           <a href="#overview">Overview</a>
           <a href="#workflow">Workflow</a>
           <a href="#faq">FAQ</a>
           <a href="#contact">Contact</a>
+        </div>
+        <div id="hamburger-container">
+          <div class="bar top"></div>
+          <div class="bar middle"></div>
+          <div class="bar bottom"></div>
         </div>
       </div>
     </section>
@@ -113,12 +111,13 @@
       <p>Don't hesitate to contact us through info@radmap.tech!</p>
     </section>
 
-    <script>
-    const toggleRotation = () => {
-       document.getElementById("hamburger-container").classList.toggle("rotate")
-     }
-   </script>
 
   </body>
-  
+  <script>
+    const toggleNavbar = () => {
+        document.getElementById("hamburger-container").classList.toggle("rotate")
+        document.getElementById("menu").classList.toggle("expanded")
+    }
+  </script>
+
 </html>
