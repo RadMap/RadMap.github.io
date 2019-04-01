@@ -93,8 +93,8 @@ button:hover a {
 .navbar img {
   height: 50px;
   object-fit: contain;
-  align-self: center;
-  padding: 0px 10px;
+  align-self: flex-start;
+  padding: 3px 10px 0px;
   display: inline;
 }
 
@@ -103,14 +103,7 @@ button:hover a {
   text-align: right;
 }
 
-.hamburger-checkbox {
-  position: absolute;
-  right: 0;
-  top: 0;
-  display: none;
-}
-
-.menu {
+#menu {
   width: 100%;
   height: 100%;
   display: flex;
@@ -120,7 +113,7 @@ button:hover a {
   padding: none;
 }
 
-.menu a {
+#menu a {
   color: #FFFFFF;
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
@@ -129,7 +122,7 @@ button:hover a {
   text-decoration: none;
 }
 
-.menu a:hover {
+#menu a:hover {
   color: #e85a4f;
 }
 
@@ -168,6 +161,10 @@ button:hover a {
 
 @media (max-width: 700px) {
 
+  .body {
+    width: 100%;
+  }
+
   .menu {
     display: none;
   }
@@ -176,18 +173,14 @@ button:hover a {
     height: 100%;
   }
 
-  .hamburger-label {
-    display: block;
-  }
-
-  .con {
+  #hamburger-container {
     width: 30px;
     height: 30px;
     cursor: pointer;
     position: absolute;
     right: 0;
     top: 0;
-    padding-right: 10px;
+    padding-right: 30px;
   }
 
   .bar {
@@ -196,7 +189,7 @@ button:hover a {
     width: 50px;
     background: white;
     margin: 10px 0px;
-    transition: all 0.1s ease;
+    transition: all 0.2s ease;
   }
 
   .middle {
@@ -215,21 +208,26 @@ button:hover a {
     width: 0;
   }
 
-  .hamburger-checkbox:checked + .menu {
+  #menu {
+    visibility: hidden;
+  }
+
+  #menu.expanded {
     display: flex;
     width: calc(100% - 20px);
     flex-direction: column;
     align-items: flex-start;
     z-index: 10;
-    color: black;
-    padding-top: 40px;
+    color: #303030;
+    padding-top: 60px;
+    visibility: visible;
   }
 
-  .hamburger-checkbox:checked + .menu a {
+  #menu.expanded a {
     display: block;
     width: 100%;
     padding: 18px 10px;
-    background-color: black;
+    background-color: #303030;
   }
 
   .header {

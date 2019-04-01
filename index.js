@@ -9,4 +9,3 @@ fetch("https://api.github.com/repos/RadMap/RadMap/releases/latest")
     }).catch((error) => {
         console.log(error)
     })
-   
