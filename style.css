@@ -262,7 +262,7 @@ code, kbd {
 .hero {
   position: relative;
   overflow: hidden;
-  padding: 88px 0 72px;
+  padding: 48px 0 72px;
 }
 
 .hero-bg {
@@ -335,9 +335,8 @@ h1 {
   margin-bottom: 34px;
 }
 
-.cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 20px; }
+.cta-row { display: flex; flex-wrap: wrap; gap: 12px; }
 
-.fineprint { font-size: 13px; color: var(--muted); }
 
 /* The logo's spiral echoes the particle tracks behind it. */
 .hero-mark {
@@ -563,27 +562,28 @@ h2 {
 .step-panel h3 { font-size: 26px; font-weight: 600; margin-bottom: 14px; }
 .step-panel > p:not(.step-count) { color: var(--muted); font-size: 16.5px; }
 
-.actions {
-  list-style: none;
+/* Key facts and options for a step: label on the left, detail on the right */
+.facts {
   margin: 28px 0 0;
-  padding: 24px 0 0;
-  border-top: 1px dashed var(--border);
+  border-top: 1px solid var(--border);
+}
+
+.facts div {
   display: grid;
-  gap: 12px;
-  font-size: 15px;
+  grid-template-columns: 130px 1fr;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
 }
 
-.actions li { position: relative; padding-left: 24px; }
-
-.actions li::before {
-  content: "\2192";
-  position: absolute;
-  left: 0;
-  color: var(--coral);
-  font-family: var(--font-mono);
+.facts dt {
+  font: 500 12px/1.9 var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--coral-ink);
 }
 
-.actions kbd { margin-right: 2px; }
+.facts dd { margin: 0; font-size: 15px; }
 
 /* Licensing */
 .plans {
@@ -722,7 +722,7 @@ h2 {
   .menu a { padding: 12px; font-size: 16px; }
 
   .container, .nav-inner { padding-left: 16px; padding-right: 16px; }
-  .hero { padding: 56px 0 48px; }
+  .hero { padding: 36px 0 48px; }
   .section { padding: 56px 0; }
   .section-head { margin-bottom: 32px; }
   .cta-row .btn { flex: 1 1 100%; }
@@ -735,6 +735,7 @@ h2 {
   .step-tabs .t { display: none; }
   .step-panel { padding: 26px 22px; }
   .step-panel h3 { font-size: 22px; }
+  .facts div { grid-template-columns: 1fr; gap: 2px; }
 
   .accordion details:has(.acc-icon) > p { padding-left: 22px; }
   .accordion summary { padding: 16px 48px 16px 18px; gap: 14px; }
