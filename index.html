@@ -257,7 +257,7 @@
               <ul class="checks">
                 <li>Every feature of the application</li>
                 <li>Up to <strong>50,000</strong> primary particles per run</li>
-                <li>Enough for most screening calculations</li>
+                <li>Ideal for evaluating RadMap and building models</li>
                 <li>No registration required</li>
               </ul>
               <a class="btn btn-ghost download-link" href="https://github.com/RadMap/RadMap/releases/latest">Download RadMap</a>
@@ -293,7 +293,8 @@
               <dl class="reqs">
                 <div><dt>OS</dt><dd>Windows 10 (version 1803 or later) or Windows 11, 64-bit</dd></div>
                 <div><dt>Disk</dt><dd>About 1&nbsp;GB free</dd></div>
-                <div><dt>CPU</dt><dd>Multi-core recommended – simulation time scales with the number of cores</dd></div>
+                <div><dt>CPU</dt><dd>Any modern processor – simulations use every core, so more cores mean shorter run times</dd></div>
+                <div><dt>Graphics</dt><dd>OpenGL 3.3 or later – any graphics card or integrated graphics from the last decade; some virtual machines and remote desktop sessions lack it</dd></div>
                 <div><dt>Account</dt><dd>Administrator rights to install</dd></div>
               </dl>
             </details>
@@ -302,8 +303,9 @@
               <p>In RadMap, open <kbd>Help → License</kbd>. The dialog shows your machine ID and copies it to the clipboard – send it to <a href="mailto:info@radmap.tech">info@radmap.tech</a>. When you receive your <code>.lic</code> file, open the same dialog, click <kbd>Install License File…</kbd> and select it. The license takes effect immediately, is tied to that machine and cannot be transferred. If it has an expiry date, the same dialog shows it; when it expires, RadMap returns to the free license.</p>
             </details>
             <details name="faq">
-              <summary><span class="acc-title">How many primary particles do I need?</span></summary>
-              <p>It depends on the precision you need. Run time grows linearly with the number of particles, while the statistical uncertainty only shrinks with the square root: ten times more particles takes ten times longer and reduces the standard deviation by roughly a factor of three. The free license’s 50,000 particles per run are enough for most screening calculations.</p>
+              <summary><span class="acc-title">How long does a simulation take?</span></summary>
+              <p>It depends on how many primary particles your case needs, and on your computer. As a guide, a typical geometry with 10<sup>6</sup> primary particles (requires a full license) finishes in about 30 seconds on a standard laptop, with a statistical uncertainty of calculated dose rates below 5&nbsp;%. Run time grows linearly with the number of particles and drops with every extra CPU core, since simulations are multi-threaded. Enabling electron transport also makes a run noticeably slower.</p>
+              <p>The number of particles needed depends on the case. Shielding between source and dose map, distance, and the size of the dose map all decide how many particles actually reach it – a heavily shielded or distant dose map may need many times more than one in direct view of the source. Increase the number of particles until the uncertainty reported with each dose rate is small enough for your purpose: ten times more particles takes ten times longer and reduces the uncertainty by roughly a factor of three.</p>
             </details>
             <details name="faq">
               <summary><span class="acc-title">Which dose quantities can RadMap calculate?</span></summary>
