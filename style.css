@@ -262,7 +262,7 @@ code, kbd {
 .hero {
   position: relative;
   overflow: hidden;
-  padding: 88px 0 96px;
+  padding: 88px 0 72px;
 }
 
 .hero-bg {
@@ -364,10 +364,10 @@ h1 {
 /* ==========================================================================
    Sections
    ========================================================================== */
-.section { padding: 104px 0; }
+.section { padding: 72px 0; }
 .section-alt { background: var(--bg-alt); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
 
-.section-head { max-width: 680px; margin-bottom: 56px; }
+.section-head { max-width: 680px; margin-bottom: 44px; }
 
 .kicker {
   font: 500 13px/1 var(--font-mono);
@@ -722,9 +722,9 @@ h2 {
   .menu a { padding: 12px; font-size: 16px; }
 
   .container, .nav-inner { padding-left: 16px; padding-right: 16px; }
-  .hero { padding: 56px 0 64px; }
-  .section { padding: 72px 0; }
-  .section-head { margin-bottom: 40px; }
+  .hero { padding: 56px 0 48px; }
+  .section { padding: 56px 0; }
+  .section-head { margin-bottom: 32px; }
   .cta-row .btn { flex: 1 1 100%; }
 
   /* steps become a row of numbers */
