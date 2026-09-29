@@ -463,7 +463,11 @@ h2 {
 
 .accordion details > p,
 .accordion details > dl { margin: 0; padding: 0 24px 22px; color: var(--muted); }
+.accordion details > ul { margin: -10px 0 0; padding: 0 24px 16px 42px; color: var(--muted); }
+.accordion details > ul li { margin-bottom: 6px; }
+.accordion details > ul strong { color: var(--text); font-weight: 600; }
 .accordion details:has(.acc-icon) > p { padding-left: 78px; }
+.accordion details:has(.acc-icon) > ul { padding-left: 96px; }
 .accordion details a { color: var(--coral-ink); }
 
 .reqs { display: grid; gap: 12px; }
@@ -738,6 +742,7 @@ h2 {
   .facts div { grid-template-columns: 1fr; gap: 2px; }
 
   .accordion details:has(.acc-icon) > p { padding-left: 22px; }
+  .accordion details:has(.acc-icon) > ul { padding-left: 40px; }
   .accordion summary { padding: 16px 48px 16px 18px; gap: 14px; }
   .accordion summary::after { right: 20px; }
   .reqs div { grid-template-columns: 1fr; gap: 2px; }

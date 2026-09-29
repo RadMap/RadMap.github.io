@@ -111,35 +111,41 @@
                 <span class="acc-icon"><svg viewBox="0 0 24 24"><path d="M12 2 3 7v10l9 5 9-5V7l-9-5Z"/><path d="m3 7 9 5 9-5M12 12v10"/></svg></span>
                 <span class="acc-title">3D geometry builder</span>
               </summary>
-              <p>Build your environment from nested boxes, tubes and spheres – with adjustable opening angles for shielding containers and shells. Position and rotate each solid in the 3D view, and save any part as a reusable volume for other projects. RadMap checks for overlapping volumes before every run.</p>
+              <p>Build your environment from nested boxes, tubes and spheres – with adjustable opening angles for shielding containers and shells. Position and rotate each solid in the 3D view, and save any part as a reusable volume for other projects.</p>
             </details>
             <details name="features">
               <summary>
                 <span class="acc-icon"><svg viewBox="0 0 24 24"><path d="M9 3h6M10 3v6L4.5 19a1.5 1.5 0 0 0 1.3 2h12.4a1.5 1.5 0 0 0 1.3-2L14 9V3"/><path d="M7 15h10"/></svg></span>
                 <span class="acc-title">Materials database</span>
               </summary>
-              <p>Start from about 280 predefined materials – elements, compounds, concrete, lead glass and ICRP/ICRU tissues. Define your own materials, elements and isotopes in the material editor, and import or export whole libraries.</p>
+              <p>Choose from a wide selection of predefined materials from the NIST database. Define your own materials, elements and isotopes in the material editor, and import or export whole material libraries.</p>
             </details>
             <details name="features">
               <summary>
                 <span class="acc-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/><path d="M12 10 8.5 4a8 8 0 0 1 7 0L12 10ZM13.7 13l6.9.1a8 8 0 0 1-3.5 6L13.7 13ZM10.3 13l-3.4 6.1a8 8 0 0 1-3.5-6l6.9-.1Z"/></svg></span>
                 <span class="acc-title">Radioactive sources</span>
               </summary>
-              <p>Attach a source to any solid and choose from nearly 3,000 radioactive isotopes. Give the activity in becquerels or curies – as a total, or per mass or volume of the source material, from which RadMap derives the total. Optionally follow the full decay chain.</p>
+              <p>Attach a source to any solid and choose from a large number of radioactive isotopes. Give the activity in becquerels or curies – as a total, or per mass or volume of the solid. Optionally follow the full decay chain.</p>
             </details>
             <details name="features">
               <summary>
                 <span class="acc-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></svg></span>
-                <span class="acc-title">Effective dose, H*(10) and air kerma</span>
+                <span class="acc-title">Dose quantities</span>
               </summary>
-              <p>Score effective dose in Sv/h for six body orientations – AP, PA, ROT, ISO, LLAT and RLAT – ambient dose equivalent H*(10) in Sv/h for area monitoring, or air kerma in Gy/h. Dose maps don’t disturb the transport and may overlap solids.</p>
+              <p>Each dose map scores one of these quantities:</p>
+              <ul>
+                <li><strong>Effective dose</strong> (Sv/h) – for an AP, PA, ROT, ISO, LLAT or RLAT body orientation</li>
+                <li><strong>Ambient dose equivalent H*(10)</strong> (Sv/h) – for area monitoring</li>
+                <li><strong>Air kerma</strong> (Gy/h) – for instrument calibration, such as ionisation chambers</li>
+              </ul>
+              <p>Dose maps don’t disturb the transport and may overlap solids.</p>
             </details>
             <details name="features">
               <summary>
                 <span class="acc-icon"><svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5v14Z"/><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5M9 7h7M9 11h5"/></svg></span>
-                <span class="acc-title">Traceable conversion data</span>
+                <span class="acc-title">Conversion data</span>
               </summary>
-              <p>Fluence is converted to dose with coefficients from published tables – ICRP 116 for effective dose, ICRP 74 for H*(10) and air kerma. RadMap applies them, it doesn’t derive them, and every report lists the publications behind its numbers.</p>
+              <p>RadMap scores fluence internally and converts it to dose with coefficients from tables published by the ICRP and ICRU. Every report lists the publications behind its numbers.</p>
             </details>
             <details name="features">
               <summary>
@@ -153,7 +159,7 @@
                 <span class="acc-icon"><svg viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9l-6-6Z"/><path d="M14 3v6h6M8 17v-3M12 17v-6M16 17v-4"/></svg></span>
                 <span class="acc-title">Results &amp; PDF reports</span>
               </summary>
-              <p>Every dose map shows its dose rate with statistical uncertainty. Export a PDF report with the dose maps, sources, data sources and a picture of the 3D scene – the project locks so results always match their inputs.</p>
+              <p>Every dose map shows its dose rate with statistical uncertainty. Export a PDF report with the dose maps, sources, data sources and a picture of the 3D scene.</p>
             </details>
           </div>
         </div>
@@ -184,7 +190,7 @@
                 <dl class="facts">
                   <div><dt>Shapes</dt><dd>Boxes, tubes and spheres – tubes and spheres can be hollow or cut open with angles</dd></div>
                   <div><dt>Placement</dt><dd>Position and rotation relative to the parent solid</dd></div>
-                  <div><dt>Materials</dt><dd>About 280 predefined, or your own materials, elements and isotopes</dd></div>
+                  <div><dt>Materials</dt><dd>Predefined materials from the NIST database, or your own materials, elements and isotopes</dd></div>
                   <div><dt>Reuse</dt><dd>Save any part as a volume and load it into other projects</dd></div>
                 </dl>
               </div>
@@ -193,8 +199,8 @@
                 <h3>Place sources</h3>
                 <p>Make any solid radioactive by attaching a source to it.</p>
                 <dl class="facts">
-                  <div><dt>Isotopes</dt><dd>Nearly 3,000 radioactive isotopes from Geant4’s decay data</dd></div>
-                  <div><dt>Activity</dt><dd>Total, or per mass or volume of the source material</dd></div>
+                  <div><dt>Isotopes</dt><dd>Standard and exotic radioactive isotopes – from common calibration and industrial sources to rare nuclides</dd></div>
+                  <div><dt>Activity</dt><dd>Total, or per mass or volume of the solid</dd></div>
                   <div><dt>Units</dt><dd>Becquerel (nBq – EBq) or curie (nCi – ECi)</dd></div>
                   <div><dt>Decay chain</dt><dd>Optionally follow the full chain of decay products</dd></div>
                 </dl>
@@ -206,7 +212,7 @@
                 <dl class="facts">
                   <div><dt>Effective dose</dt><dd>Sv/h, for an AP, PA, ROT, ISO, LLAT or RLAT body orientation</dd></div>
                   <div><dt>H*(10)</dt><dd>Sv/h, for area monitoring and comparison with survey meters</dd></div>
-                  <div><dt>Air kerma</dt><dd>Gy/h, the radiation field itself with no body present</dd></div>
+                  <div><dt>Air kerma</dt><dd>Gy/h, for instrument calibration, such as ionisation chambers</dd></div>
                 </dl>
               </div>
               <div class="step-panel" role="tabpanel" id="step-4" aria-labelledby="tab-4" hidden>
@@ -218,7 +224,6 @@
                   <div><dt>Free license</dt><dd>Up to 50,000 primary particles per run</dd></div>
                   <div><dt>Electrons</dt><dd>Optional transport for bremsstrahlung from beta emitters behind high-Z shielding</dd></div>
                   <div><dt>Speed</dt><dd>Multi-threaded – the run uses every core of your computer</dd></div>
-                  <div><dt>Checks</dt><dd>Overlapping volumes are detected before the run starts</dd></div>
                 </dl>
               </div>
               <div class="step-panel" role="tabpanel" id="step-5" aria-labelledby="tab-5" hidden>
@@ -259,7 +264,7 @@
             </article>
             <article class="plan plan-featured">
               <h3>Full</h3>
-              <p class="plan-tag">Free, time-limited license</p>
+              <p class="plan-tag">On request</p>
               <ul class="checks">
                 <li><strong>No limit</strong> on primary particles</li>
                 <li>Higher precision in the results</li>
@@ -302,7 +307,7 @@
             </details>
             <details name="faq">
               <summary><span class="acc-title">Which dose quantities can RadMap calculate?</span></summary>
-              <p><em>Effective dose</em> in Sv/h – the whole-body quantity radiation protection limits are expressed in – for six body orientations: AP, PA, ROT, ISO, LLAT and RLAT. ROT is generally the most meaningful choice for a single source; with several sources at different angles, prefer ROT or ISO. <em>Ambient dose equivalent H*(10)</em> in Sv/h is the operational quantity for area monitoring – what survey meters are calibrated to show. <em>Air kerma</em> in Gy/h describes the radiation field itself with no body present, for comparison with figures quoted in air kerma.</p>
+              <p><em>Effective dose</em> in Sv/h – the whole-body quantity radiation protection limits are expressed in – for six body orientations: AP, PA, ROT, ISO, LLAT and RLAT. ROT is generally the most meaningful choice for a single source; with several sources at different angles, prefer ROT or ISO. <em>Ambient dose equivalent H*(10)</em> in Sv/h is the operational quantity for area monitoring – what survey meters are calibrated to show. <em>Air kerma</em> in Gy/h is the reference quantity for calibrating instruments such as ionisation chambers, and for comparison with figures quoted in air kerma.</p>
             </details>
             <details name="faq">
               <summary><span class="acc-title">Where do the conversion coefficients come from?</span></summary>
