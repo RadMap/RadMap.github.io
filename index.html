@@ -6,7 +6,8 @@
     <title>RadMap – Monte Carlo dose rate calculations</title>
     <meta name="description" content="RadMap is a Windows desktop application for calculating external gamma dose rates with full Monte Carlo radiation transport, using the Geant4 toolkit.">
     <meta name="keywords" content="radiation, dose rate, dose calculation, Monte Carlo, Geant4, radiation protection, nuclear engineering, shielding">
-    <meta name="theme-color" content="#E85A4F">
+    <meta name="theme-color" content="#E04940" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#EE6A5D" media="(prefers-color-scheme: dark)">
     <link rel="icon" type="image/png" href="./favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,7 +27,8 @@
     <header class="nav" id="top">
       <div class="nav-inner">
         <a class="brand" href="#top" aria-label="RadMap home">
-          <img src="./logo.png" alt="" width="32" height="32">
+          <img class="only-light" src="./logo-light.png" alt="" width="32" height="32">
+          <img class="only-dark" src="./logo-dark.png" alt="" width="32" height="32">
           <span>RadMap</span>
         </a>
         <nav id="menu" class="menu" aria-label="Main">
@@ -38,8 +40,8 @@
         </nav>
         <div class="nav-actions">
           <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle colour theme">
-            <svg class="i-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            <svg class="i-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+            <svg class="only-light" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            <svg class="only-dark" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
           </button>
           <a class="btn btn-primary btn-sm nav-download download-link" href="https://github.com/RadMap/RadMap/releases/latest">Download</a>
           <button class="icon-btn menu-btn" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
@@ -78,7 +80,8 @@
           </div>
 
           <div class="hero-mark" aria-hidden="true">
-            <img src="./logo.png" alt="" width="360" height="360">
+            <img class="only-light" src="./logo-light.png" alt="" width="360" height="360">
+            <img class="only-dark" src="./logo-dark.png" alt="" width="360" height="360">
           </div>
         </div>
       </section>
@@ -299,7 +302,8 @@
       <section id="contact" class="section">
         <div class="container">
           <div class="cta-panel">
-            <img src="./logo.png" alt="" width="56" height="56">
+            <img class="only-light" src="./logo-light.png" alt="" width="56" height="56">
+            <img class="only-dark" src="./logo-dark.png" alt="" width="56" height="56">
             <h2>Questions? Get in touch.</h2>
             <p>We're happy to help with licensing, troubleshooting or your specific use case.</p>
             <a class="btn btn-primary" href="mailto:info@radmap.tech">info@radmap.tech</a>
@@ -311,7 +315,8 @@
     <footer class="footer">
       <div class="container footer-inner">
         <a class="brand" href="#top">
-          <img src="./logo.png" alt="" width="24" height="24">
+          <img class="only-light" src="./logo-light.png" alt="" width="24" height="24">
+          <img class="only-dark" src="./logo-dark.png" alt="" width="24" height="24">
           <span>RadMap</span>
         </a>
         <nav aria-label="Footer">
