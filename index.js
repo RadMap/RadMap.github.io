@@ -5,9 +5,11 @@ fetch("https://api.github.com/repos/RadMap/RadMap/releases/latest")
         if (result.tag_name) {
             document.getElementById("version").textContent = result.tag_name;
         }
-        if (result.assets && result.assets.length > 0) {
-            const url = result.assets[0].browser_download_url;
-            document.querySelectorAll(".download-link").forEach((a) => { a.href = url; });
+        // Pick the installer by name: a release also carries its checksum file,
+        // and the order of a release's assets is not guaranteed.
+        const installer = (result.assets || []).find((a) => a.name === "RadMap_setup.exe");
+        if (installer) {
+            document.querySelectorAll(".download-link").forEach((a) => { a.href = installer.browser_download_url; });
         }
     })
     .catch(() => {
