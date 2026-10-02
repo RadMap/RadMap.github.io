@@ -590,11 +590,13 @@ h2 {
 .facts dd { margin: 0; font-size: 15px; }
 
 /* Licensing */
+/* The cards sit on the same 5:7 columns as the split sections (Features,
+ * Workflow, FAQ, Support), so their edges line up with the rest of the page */
 .plans {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  max-width: 900px;
+  grid-template-columns: 5fr 7fr;
+  column-gap: 72px;
+  row-gap: 20px;
 }
 
 .plan {
@@ -655,19 +657,40 @@ h2 {
 
 .plan .btn { margin-top: auto; align-self: flex-start; }
 
-/* Contact */
-.cta-panel {
-  text-align: center;
-  padding: 64px 24px;
-  border-radius: 24px;
+/* Support — heading on the left, three always-open rows on the right in the
+ * look of the Features and FAQ rows.  Each row is a link as a whole; the
+ * arrow and the hover state set it apart from the expandable FAQ rows. */
+.note { font-size: 14px; color: var(--muted); margin-top: 16px; }
+
+.contact-list { display: grid; gap: 12px; }
+
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 22px;
+  background: var(--surface);
   border: 1px solid var(--border);
-  background:
-    radial-gradient(ellipse at 50% 0%, color-mix(in srgb, var(--coral) 16%, transparent), transparent 60%),
-    var(--surface);
+  border-radius: 12px;
+  color: var(--text);
+  text-decoration: none;
+  transition: border-color 0.2s, background-color 0.2s;
 }
 
-.cta-panel img { margin-bottom: 20px; }
-.cta-panel p { color: var(--muted); font-size: 17px; margin: 14px auto 28px; max-width: 480px; }
+.contact-row:hover { border-color: var(--coral-line); }
+
+.contact-text { display: grid; gap: 2px; }
+.contact-text strong { font-weight: 600; font-size: 16px; }
+.contact-text span { color: var(--muted); font-size: 14.5px; }
+
+.contact-arrow {
+  flex: none;
+  margin-left: auto;
+  color: var(--coral);
+  transition: transform 0.2s;
+}
+
+.contact-row:hover .contact-arrow { transform: translateX(3px); }
 
 /* Footer */
 .footer { border-top: 1px solid var(--border); padding: 32px 0; }
@@ -744,6 +767,7 @@ h2 {
   .accordion details:has(.acc-icon) > p { padding-left: 22px; }
   .accordion details:has(.acc-icon) > ul { padding-left: 40px; }
   .accordion summary { padding: 16px 48px 16px 18px; gap: 14px; }
+  .contact-row { padding: 16px 18px; gap: 14px; }
   .accordion summary::after { right: 20px; }
   .reqs div { grid-template-columns: 1fr; gap: 2px; }
 
