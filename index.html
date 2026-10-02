@@ -77,6 +77,15 @@
               </a>
               <a class="btn btn-ghost" href="https://radmap.tech/documentation/v2.0.0/" target="_blank" rel="noopener noreferrer">Read the documentation</a>
             </div>
+            <!-- Filled in by index.js from the latest release; stays hidden when the
+                 release has no checksum. -->
+            <p class="checksum" id="checksum" hidden>
+              <span class="checksum-label">SHA-256</span>
+              <code id="checksum-value"></code>
+              <button type="button" class="checksum-copy" id="checksum-copy">copy</button>
+              <span id="checksum-file-sep" hidden>·</span>
+              <a id="checksum-file" href="#" hidden>checksum file</a>
+            </p>
           </div>
 
           <div class="hero-mark" aria-hidden="true">
@@ -298,6 +307,10 @@
                 <div><dt>Graphics</dt><dd>OpenGL 3.3 or later – any graphics card or integrated graphics from the last decade; some virtual machines and remote desktop sessions lack it</dd></div>
                 <div><dt>Account</dt><dd>Administrator rights to install</dd></div>
               </dl>
+            </details>
+            <details name="faq">
+              <summary><span class="acc-title">How do I verify the download?</span></summary>
+              <p>Compare the installer's SHA-256 checksum with the one shown under the Download button, which is also in <code>RadMap_setup.exe.sha256</code> on the release page. In PowerShell, in the folder you downloaded to, run <code>Get-FileHash .\RadMap_setup.exe -Algorithm SHA256</code> – the <em>Hash</em> it prints must match. A matching checksum shows that the installer arrived complete and unaltered.</p>
             </details>
             <details name="faq">
               <summary><span class="acc-title">What does RadMap cost?</span></summary>

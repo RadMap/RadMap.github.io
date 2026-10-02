@@ -337,6 +337,37 @@ h1 {
 
 .cta-row { display: flex; flex-wrap: wrap; gap: 12px; }
 
+/* Installer checksum under the buttons.  No display value here: the hidden
+ * attribute (set until index.js finds a checksum) must keep working. */
+.checksum {
+  margin-top: 16px;
+  font: 12.5px/1.5 var(--font-mono);
+  color: var(--muted);
+}
+
+.checksum-label { letter-spacing: 0.06em; margin-right: 4px; }
+
+.checksum code {
+  background: none;
+  color: var(--text);
+  padding: 0;
+  cursor: help;
+}
+
+.checksum-copy {
+  background: none;
+  border: 0;
+  padding: 0 2px;
+  font: inherit;
+  color: var(--coral-ink);
+  cursor: pointer;
+}
+
+.checksum-copy:hover,
+.checksum a:hover { text-decoration: underline; }
+
+.checksum a { color: var(--coral-ink); text-decoration: none; }
+
 
 /* The logo's spiral echoes the particle tracks behind it. */
 .hero-mark {
