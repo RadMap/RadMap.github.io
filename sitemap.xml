@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- The pages of radmap.tech.  The documentation under /documentation/ is a separate
+     site (RadMap/documentation) and gets its own sitemap from Sphinx. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://radmap.tech/</loc>
+  </url>
+</urlset>

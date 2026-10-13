@@ -1,0 +1,37 @@
+# RadMap
+
+> RadMap is a Windows desktop application for radiation dose rate calculations. Users model an environment in 3D, place radioactive sources and dose maps, and a full Monte Carlo simulation, using the Geant4 toolkit as its calculation engine, computes dose rates with statistical uncertainties, using every CPU core.
+
+RadMap is for radiation protection and shielding work: calculating the external dose to a person in a customised environment, without writing simulation code. It runs on Windows 10 (version 1803 or later) and Windows 11, 64-bit. It is currently free of charge.
+
+What RadMap does:
+
+- Geometry: nested boxes, tubes and spheres (tubes and spheres can be hollow or cut open with angles), positioned and rotated in a 3D view inside a world box. Any part can be saved as a reusable volume.
+- Materials: predefined materials from the NIST database, plus user-defined materials, elements and isotopes; material libraries can be imported and exported.
+- Sources: any solid can be made radioactive, with a large choice of radioactive isotopes. Activity in becquerels or curies, as a total or per mass or volume of the solid; optionally following the full decay chain. Sources use the decay scheme of the ground-state nucleus (so Tc-99 does not give the dose rate of Tc-99m).
+- Dose quantities, scored by box-shaped dose maps that do not disturb the transport:
+  - Effective dose in Sv/h, for AP, PA, ROT, ISO, LLAT or RLAT body orientation (conversion coefficients from ICRP 116, photons 10 keV to 10 GeV).
+  - Ambient dose equivalent H*(10) in Sv/h, for area monitoring and comparison with survey meters (ICRP 74, 10 keV to 10 MeV).
+  - Air kerma in Gy/h, for instrument calibration such as ionisation chambers (ICRP 74, 10 keV to 10 MeV).
+- Optional electron transport, for bremsstrahlung from high-energy beta emitters (such as Sr-90/Y-90 or P-32) in high-Z shielding like lead or tungsten.
+- Results: each dose map shows its dose rate with its statistical uncertainty. A PDF report lists dose maps, sources, the publications behind the numbers, and a picture of the 3D scene. Inputs are locked while results are attached.
+- Run time: grows linearly with the number of primary particles; ten times more particles reduce the uncertainty about threefold. As a guide, 10^6 primary particles (which needs a full license) in a typical geometry take about 30 seconds on a standard laptop, with a statistical uncertainty of the calculated dose rates below 5 %.
+
+Licensing: the free license is activated automatically, has no time limit and allows up to 50,000 primary particles per run. A full license without the particle limit is available as a free 30-day trial on request; it is bound to one machine.
+
+## Download and documentation
+
+- [Download RadMap for Windows](https://github.com/RadMap/RadMap/releases/latest/download/RadMap_setup.exe): the installer of the latest release. The release page also has its SHA-256 checksum.
+- [Releases and release notes](https://github.com/RadMap/RadMap/releases/latest)
+- [Documentation](https://radmap.tech/documentation/latest/): installation, licensing and the user guide.
+- [End-user license agreement](https://radmap.tech/documentation/latest/RadMapLicense.html)
+
+## Support
+
+- [Questions and answers](https://github.com/RadMap/RadMap/discussions/categories/q-a): public GitHub Discussions.
+- [Report a problem or request a feature](https://github.com/RadMap/RadMap/issues/new/choose): GitHub issue forms.
+- Email info@radmap.tech: licensing, trial licenses, confidential matters.
+
+## Optional
+
+- [Website](https://radmap.tech/): features, workflow, licensing and FAQ.
