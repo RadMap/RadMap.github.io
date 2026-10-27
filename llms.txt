@@ -23,7 +23,10 @@ Licensing: the free license is activated automatically, has no time limit and al
 
 - [Download RadMap for Windows](https://github.com/RadMap/RadMap/releases/latest/download/RadMap_setup.exe): the installer of the latest release. The release page also has its SHA-256 checksum.
 - [Releases and release notes](https://github.com/RadMap/RadMap/releases/latest)
-- [Documentation](https://radmap.tech/documentation/latest/): installation, licensing and the user guide.
+- [Documentation](https://radmap.tech/documentation/latest/): installation, licensing, the user guide and how RadMap calculates. Its front page also links the version's V&V report (verification and validation, with every test result) and the software development plan, both PDF.
+- [How RadMap calculates](https://radmap.tech/documentation/latest/methods.html): geometry and materials, sources and decay, particle transport, scoring with conversion coefficients, and statistical uncertainty.
+- [Known limitations](https://radmap.tech/documentation/latest/user_guide.html#known-limitations): what RadMap does not calculate, or calculates only approximately.
+- [Verifying an installation](https://radmap.tech/documentation/latest/installation.html#verifying-installation): the projects and acceptance limits with which a user checks that an installation reproduces the released results.
 - [End-user license agreement](https://radmap.tech/documentation/latest/RadMapLicense.html)
 
 ## Support
