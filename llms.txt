@@ -14,7 +14,9 @@ What RadMap does:
   - Ambient dose equivalent H*(10) in Sv/h, for area monitoring and comparison with survey meters (ICRP 74, 10 keV to 10 MeV).
   - Air kerma in Gy/h, for instrument calibration such as ionisation chambers (ICRP 74, 10 keV to 10 MeV).
 - Optional electron transport, for bremsstrahlung from high-energy beta emitters (such as Sr-90/Y-90 or P-32) in high-Z shielding like lead or tungsten.
+- Shielding, scatter and skyshine: shields, and the air and ground modelled around them, attenuate and scatter in the same transport, with no separate mode for skyshine. With the air above a shield modelled, the radiation the sky scatters back down to the ground is counted. Validated against the Kansas State University Co-60 skyshine experiment from SINBAD, the OECD/NEA shielding benchmark archive.
 - Results: each dose map shows its dose rate with its statistical uncertainty. A PDF report lists dose maps, sources, the publications behind the numbers, and a picture of the 3D scene. Inputs are locked while results are attached.
+- Verification and validation: every release comes with a V&V report, generated from RadMap's tests. It shows each result next to its reference: published data, or measurements from shielding experiments. Projects shipped with RadMap let a user check that an installation reproduces the released results.
 - Run time: grows linearly with the number of primary particles; ten times more particles reduce the uncertainty about threefold. As a guide, 10^6 primary particles (which needs a full license) in a typical geometry take about 30 seconds on a standard laptop, with a statistical uncertainty of the calculated dose rates below 5 %.
 
 Licensing: the free license is activated automatically, has no time limit and allows up to 50,000 primary particles per run. A full license without the particle limit is available as a free 30-day trial on request; it is bound to one machine.
