@@ -35,7 +35,7 @@
       "image": "https://radmap.tech/og-image.jpg",
       "featureList": [
         "Full Monte Carlo radiation transport, multi-threaded",
-        "Shielding, scatter and skyshine in one transport, validated against measurement",
+        "Shielding, scatter and skyshine in one calculation, with no buildup factors",
         "3D geometry of nested boxes, tubes and spheres",
         "Materials from the NIST database and user-defined materials",
         "Radioactive sources with optional full decay chain",
@@ -169,7 +169,7 @@
                 <span class="acc-icon"><svg viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3Z"/></svg></span>
                 <span class="acc-title">Shielding, scatter and skyshine</span>
               </summary>
-              <p>Shields attenuate and scatter, and so do the air and ground you model around them. RadMap follows every photon through all of it, with no separate mode for skyshine. Model the air above a shield, and RadMap counts the radiation the sky scatters back down to the ground. This is validated against the Kansas State University Co-60 skyshine experiment from SINBAD, the OECD/NEA shielding benchmark archive – see the <a href="https://radmap.tech/documentation/v2.0.0/RadMap_VV_report_v2.0.0.pdf" target="_blank" rel="noopener noreferrer">V&amp;V report</a>.</p>
+              <p>RadMap follows every photon through your shields and through the walls, floors, air and ground around them. Shielding, scattered radiation and skyshine all come out of one calculation: there are no buildup factors to look up and no separate mode to switch on. The <a href="https://radmap.tech/documentation/latest/" target="_blank" rel="noopener noreferrer">V&amp;V report</a> covers all three.</p>
             </details>
             <details name="features">
               <summary>
