@@ -151,8 +151,8 @@
             <h2>Monte Carlo transport, without the scripting.</h2>
             <p class="sub">
               RadMap uses the radiation transport toolkit Geant4 behind a graphical
-              interface, so you can calculate external dose to a person in a
-              customised environment in minutes rather than days.
+              interface, so you can calculate external dose to a person in your
+              own environment in minutes rather than days.
             </p>
           </div>
 
@@ -162,7 +162,7 @@
                 <span class="acc-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="2.5"/><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/></svg></span>
                 <span class="acc-title">Full Monte Carlo transport</span>
               </summary>
-              <p>RadMap uses the Geant4 toolkit as its calculation engine and follows every particle through your geometry. Simulations are multi-threaded, so run time drops with every extra CPU core.</p>
+              <p>RadMap uses the Geant4 toolkit as its calculation engine and follows every particle through your geometry, from the decay that emits it to the dose map that scores it.</p>
             </details>
             <details name="features">
               <summary>
@@ -183,7 +183,7 @@
                 <span class="acc-icon"><svg viewBox="0 0 24 24"><path d="M9 3h6M10 3v6L4.5 19a1.5 1.5 0 0 0 1.3 2h12.4a1.5 1.5 0 0 0 1.3-2L14 9V3"/><path d="M7 15h10"/></svg></span>
                 <span class="acc-title">Materials database</span>
               </summary>
-              <p>Choose from a wide selection of predefined materials from the NIST database. Define your own materials, elements and isotopes in the material editor, and import or export whole material libraries.</p>
+              <p>Choose from a wide selection of predefined materials from the NIST database, or mix existing materials by mass fraction – a concrete with iron ore, for example. Define your own materials, elements and isotopes in the material editor, and import or export whole material libraries.</p>
             </details>
             <details name="features">
               <summary>
@@ -197,13 +197,7 @@
                 <span class="acc-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></svg></span>
                 <span class="acc-title">Dose quantities</span>
               </summary>
-              <p>Each dose map scores one of these quantities:</p>
-              <ul>
-                <li><strong>Effective dose</strong> (Sv/h) – for an AP, PA, ROT, ISO, LLAT or RLAT body orientation</li>
-                <li><strong>Ambient dose equivalent H*(10)</strong> (Sv/h) – for area monitoring</li>
-                <li><strong>Air kerma</strong> (Gy/h) – for instrument calibration, such as ionisation chambers</li>
-              </ul>
-              <p>RadMap scores the photon fluence and converts it to dose with coefficients from tables published by the ICRP and ICRU; every report lists the publications behind its numbers. Dose maps don’t disturb the transport and may overlap solids.</p>
+              <p>Score effective dose for a person, ambient dose equivalent H<sup>*</sup>(10) to compare with survey meters, or air kerma for instrument calibration. The conversion coefficients come from internationally agreed ICRP tables, and every report lists the publications behind its numbers.</p>
             </details>
             <details name="features">
               <summary>
@@ -217,14 +211,14 @@
                 <span class="acc-icon"><svg viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9l-6-6Z"/><path d="M14 3v6h6M8 17v-3M12 17v-6M16 17v-4"/></svg></span>
                 <span class="acc-title">Results &amp; PDF reports</span>
               </summary>
-              <p>Every dose map shows its dose rate with statistical uncertainty. Export a PDF report with the dose maps, sources, data sources and a picture of the 3D scene.</p>
+              <p>Every dose map shows its dose rate with its statistical uncertainty. A PDF report records the dose rates, the sources, the publications behind the numbers and a picture of the 3D scene.</p>
             </details>
             <details name="features">
               <summary>
                 <span class="acc-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8 12.5 2.5 2.5L16 9.5"/></svg></span>
                 <span class="acc-title">Verified and validated</span>
               </summary>
-              <p>Every release comes with a V&amp;V report, generated from RadMap's tests. It shows each result next to its reference: published data, or measurements from shielding experiments. Projects shipped with RadMap let you check that your installation reproduces the released results. Both are in the <a href="https://radmap.tech/documentation/latest/" target="_blank" rel="noopener noreferrer">documentation</a>.</p>
+              <p>Every release comes with a V&amp;V report, generated from RadMap's tests. It shows each result next to its reference: published data, or measurements from shielding experiments. Projects shipped with RadMap let you check that your installation reproduces the released results. The report and the instructions for the check are in the <a href="https://radmap.tech/documentation/latest/" target="_blank" rel="noopener noreferrer">documentation</a>.</p>
             </details>
           </div>
         </div>
@@ -251,11 +245,11 @@
               <div class="step-panel" role="tabpanel" id="step-1" aria-labelledby="tab-1">
                 <p class="step-count">Step 1 of 5</p>
                 <h3>Build the environment</h3>
-                <p>Model the environment as nested solids inside a world box. Every solid sits fully inside its parent, and volumes may not overlap.</p>
+                <p>Model the environment as nested solids inside a world box. Every solid sits fully inside its parent, and solids may not overlap.</p>
                 <dl class="facts">
                   <div><dt>Shapes</dt><dd>Boxes, tubes and spheres – tubes and spheres can be hollow or cut open with angles</dd></div>
                   <div><dt>Placement</dt><dd>Position and rotation relative to the parent solid</dd></div>
-                  <div><dt>Materials</dt><dd>Predefined materials from the NIST database, or your own materials, elements and isotopes</dd></div>
+                  <div><dt>Materials</dt><dd>Predefined materials from the NIST database, mixes of them, or your own materials, elements and isotopes</dd></div>
                   <div><dt>Reuse</dt><dd>Save any part as a volume and load it into other projects</dd></div>
                 </dl>
               </div>
@@ -264,7 +258,7 @@
                 <h3>Place sources</h3>
                 <p>Make any solid radioactive by attaching a source to it.</p>
                 <dl class="facts">
-                  <div><dt>Isotopes</dt><dd>Standard and exotic radioactive isotopes – from common calibration and industrial sources to rare nuclides</dd></div>
+                  <div><dt>Isotopes</dt><dd>Radionuclides from Geant4's decay data – from calibration and industrial sources to rare nuclides</dd></div>
                   <div><dt>Activity</dt><dd>Total, or per mass or volume of the solid</dd></div>
                   <div><dt>Units</dt><dd>Becquerel (nBq – EBq) or curie (nCi – ECi)</dd></div>
                   <div><dt>Decay chain</dt><dd>Optionally follow the full chain of decay products</dd></div>
@@ -276,7 +270,7 @@
                 <p>Place box-shaped dose maps where you need the dose rate. They score the photon fluence without disturbing the transport and may overlap solids.</p>
                 <dl class="facts">
                   <div><dt>Effective dose</dt><dd>Sv/h, for an AP, PA, ROT, ISO, LLAT or RLAT body orientation</dd></div>
-                  <div><dt>H*(10)</dt><dd>Sv/h, for area monitoring and comparison with survey meters</dd></div>
+                  <div><dt>H<sup>*</sup>(10)</dt><dd>Sv/h, for area monitoring and comparison with survey meters</dd></div>
                   <div><dt>Air kerma</dt><dd>Gy/h, for instrument calibration, such as ionisation chambers</dd></div>
                 </dl>
               </div>
@@ -285,10 +279,9 @@
                 <h3>Simulate</h3>
                 <p>Choose how many primary particles to simulate and start the run.</p>
                 <dl class="facts">
-                  <div><dt>Precision</dt><dd>Ten times the particles gives about three times smaller uncertainty – run time grows linearly</dd></div>
+                  <div><dt>Precision</dt><dd>Ten times the particles take ten times as long and give about a third of the uncertainty</dd></div>
                   <div><dt>Free license</dt><dd>Up to 50,000 primary particles per run</dd></div>
                   <div><dt>Electrons</dt><dd>Optional transport for bremsstrahlung from beta emitters behind high-Z shielding</dd></div>
-                  <div><dt>Speed</dt><dd>Multi-threaded – the run uses every core of your computer</dd></div>
                 </dl>
               </div>
               <div class="step-panel" role="tabpanel" id="step-5" aria-labelledby="tab-5" hidden>
@@ -296,7 +289,7 @@
                 <h3>Collect results</h3>
                 <p>Each dose map shows its dose rate with its statistical uncertainty.</p>
                 <dl class="facts">
-                  <div><dt>PDF report</dt><dd>Dose maps, sources, data sources and a picture of the 3D scene</dd></div>
+                  <div><dt>PDF report</dt><dd>Dose rates, sources and a picture of the 3D scene</dd></div>
                   <div><dt>Traceability</dt><dd>Every report lists the publications behind its numbers</dd></div>
                   <div><dt>Project lock</dt><dd>Inputs are locked while results are attached, so the two always match</dd></div>
                 </dl>
@@ -312,7 +305,7 @@
           <div class="section-head">
             <p class="kicker">Licensing</p>
             <h2>Up and running in minutes.</h2>
-            <p class="sub">RadMap is currently free of charge. Install it and start calculating straight away – when you need more particles, request a free 30-day trial of the full license.</p>
+            <p class="sub">The free license has no time limit: install RadMap and start calculating straight away. Full licenses are not yet for sale; until they are, we offer a free 30-day trial – request one when you need more particles.</p>
           </div>
 
           <div class="plans">
@@ -331,12 +324,11 @@
               <h3>Full</h3>
               <p class="plan-tag">Free 30-day trial on request</p>
               <ul class="checks">
+                <li>Every feature of the free license</li>
                 <li><strong>No limit</strong> on primary particles</li>
-                <li>Higher precision in the results</li>
-                <li>Takes effect immediately – no restart</li>
                 <li>Bound to your machine</li>
               </ul>
-              <p class="plan-how">Open <kbd>Help → License</kbd> in RadMap – your machine ID is copied to the clipboard. Send it to us, then install the <code>.lic</code> file you receive with <kbd>Install License File…</kbd>.</p>
+              <p class="plan-how">Open <kbd>Help → License</kbd> in RadMap and click <kbd>Copy Machine ID</kbd>. Send the ID to us, then install the <code>.lic</code> file you receive with <kbd>Install License File…</kbd>.</p>
               <a class="btn btn-primary" href="mailto:info@radmap.tech?subject=RadMap%20trial%20license%20request">Request a trial license</a>
             </article>
           </div>
@@ -369,24 +361,24 @@
             </details>
             <details name="faq">
               <summary><span class="acc-title">What does RadMap cost?</span></summary>
-              <p>Nothing at the moment. The free license is activated automatically and has no time limit, and a full license without the particle limit is available as a free 30-day trial on request.</p>
+              <p>Nothing at the moment. The free license is activated automatically and has no time limit. Full licenses, without the particle limit, are not yet for sale; until they are, we offer a free 30-day trial on request.</p>
             </details>
             <details name="faq">
               <summary><span class="acc-title">How do I get a full license?</span></summary>
-              <p>Full licenses are currently offered as a free 30-day trial. In RadMap, open <kbd>Help → License</kbd>. The dialog shows your machine ID and copies it to the clipboard – send it to <a href="mailto:info@radmap.tech">info@radmap.tech</a>. When you receive your <code>.lic</code> file, open the same dialog, click <kbd>Install License File…</kbd> and select it. The license takes effect immediately, is tied to that machine and cannot be transferred. If it has an expiry date, the same dialog shows it; when it expires, RadMap returns to the free license.</p>
+              <p>Full licenses are not yet for sale; until they are, we offer a free 30-day trial. In RadMap, open <kbd>Help → License</kbd> and click <kbd>Copy Machine ID</kbd>, then send the ID to <a href="mailto:info@radmap.tech">info@radmap.tech</a>. When you receive your <code>.lic</code> file, open the same dialog, click <kbd>Install License File…</kbd> and select it. The license takes effect immediately, is tied to that machine and cannot be transferred. If it has an expiry date, the same dialog shows it; when it expires, RadMap returns to the free license.</p>
             </details>
             <details name="faq">
               <summary><span class="acc-title">How long does a simulation take?</span></summary>
               <p>It depends on how many primary particles your case needs, and on your computer. As a guide, a typical geometry with 10<sup>6</sup> primary particles (requires a full license) finishes in about 30 seconds on a standard laptop, with a statistical uncertainty of calculated dose rates below 5&nbsp;%. Run time grows linearly with the number of particles and drops with every extra CPU core, since simulations are multi-threaded. Enabling electron transport also makes a run noticeably slower.</p>
-              <p>The number of particles needed depends on the case. Shielding between source and dose map, distance, and the size of the dose map all decide how many particles actually reach it – a heavily shielded or distant dose map may need many times more than one in direct view of the source. Increase the number of particles until the uncertainty reported with each dose rate is small enough for your purpose: ten times more particles takes ten times longer and reduces the uncertainty by roughly a factor of three.</p>
+              <p>A heavily shielded or distant dose map may need many times more particles than one in direct view of the source. Increase the number until the uncertainty reported with each dose rate is small enough for your purpose.</p>
             </details>
             <details name="faq">
               <summary><span class="acc-title">Which dose quantities can RadMap calculate?</span></summary>
-              <p><em>Effective dose</em> in Sv/h – the whole-body quantity radiation protection limits are expressed in – for six body orientations: AP, PA, ROT, ISO, LLAT and RLAT. ROT is generally the most meaningful choice for a single source; with several sources at different angles, prefer ROT or ISO. <em>Ambient dose equivalent H*(10)</em> in Sv/h is the operational quantity for area monitoring – what survey meters are calibrated to show. <em>Air kerma</em> in Gy/h is the reference quantity for calibrating instruments such as ionisation chambers, and for comparison with figures quoted in air kerma.</p>
+              <p><em>Effective dose</em> in Sv/h – the whole-body quantity radiation protection limits are expressed in – for six body orientations: AP, PA, ROT, ISO, LLAT and RLAT. ROT is generally the most meaningful choice for a single source; with several sources at different angles, prefer ROT or ISO. <em>Ambient dose equivalent H<sup>*</sup>(10)</em> in Sv/h is the operational quantity for area monitoring – what survey meters are calibrated to show. <em>Air kerma</em> in Gy/h is the reference quantity for calibrating instruments such as ionisation chambers, and for comparison with figures quoted in air kerma.</p>
             </details>
             <details name="faq">
               <summary><span class="acc-title">Where do the conversion coefficients come from?</span></summary>
-              <p>RadMap transports particles and scores the fluence averaged over each dose map's volume. That fluence is multiplied by coefficients from internationally agreed tables – RadMap applies them, it does not derive them. Effective dose uses ICRP 116 (photons from 10&nbsp;keV to 10&nbsp;GeV); H*(10) and air kerma use ICRP 74 (10&nbsp;keV to 10&nbsp;MeV). <kbd>Dose → Dose settings</kbd> shows the publication for each quantity, and every PDF report lists the publications its numbers are based on.</p>
+              <p>RadMap transports particles and scores the fluence averaged over each dose map's volume. That fluence is multiplied by coefficients from internationally agreed tables – RadMap applies them, it does not derive them. Effective dose uses ICRP 116 (photons from 10&nbsp;keV to 10&nbsp;GeV); H<sup>*</sup>(10) and air kerma use ICRP 74 (10&nbsp;keV to 10&nbsp;MeV). <kbd>Dose → Dose settings</kbd> shows the publication for each quantity, and every PDF report lists the publications its numbers are based on.</p>
             </details>
             <details name="faq">
               <summary><span class="acc-title">When should I enable electron transport?</span></summary>
@@ -398,7 +390,7 @@
             </details>
             <details name="faq">
               <summary><span class="acc-title">Can I simulate metastable isotopes such as Tc-99m?</span></summary>
-              <p>Not directly. Sources use the decay scheme of the ground-state nucleus, so Tc-99 does not give the dose rate of Tc-99m. Cs-137 does give the expected result, because it decays to the metastable Ba-137m.</p>
+              <p>Not directly. Sources use the decay scheme of the ground-state nucleus, so Tc-99 does not give the dose rate of Tc-99m. Cs-137 does give the expected result, because it decays to the metastable Ba-137m. The documentation's <a href="https://radmap.tech/documentation/latest/user_guide.html#known-limitations" target="_blank" rel="noopener noreferrer">known limitations</a> list this and what else RadMap does not calculate.</p>
             </details>
           </div>
         </div>
