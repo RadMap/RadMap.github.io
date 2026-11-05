@@ -97,4 +97,43 @@ tabs.forEach((tab, i) => {
     });
 });
 
+// Screenshots: a gallery over the page.  The menu's "Screenshots" opens it, and so does
+// #screenshots in the address, so it can be linked to.  Tabs and the arrow keys switch
+// pictures; Esc, the close button or a click outside the frame closes it.
+const gallery = document.getElementById("screenshots");
+const galleryTabs = [...gallery.querySelectorAll('[role="tab"]')];
+const showShot = (index, focus) => {
+    galleryTabs.forEach((tab, i) => {
+        const selected = i === index;
+        tab.setAttribute("aria-selected", String(selected));
+        tab.tabIndex = selected ? 0 : -1;
+        document.getElementById(tab.getAttribute("aria-controls")).hidden = !selected;
+    });
+    if (focus) galleryTabs[index].focus();
+};
+galleryTabs.forEach((tab, i) => tab.addEventListener("click", () => showShot(i)));
+gallery.addEventListener("keydown", (e) => {
+    const step = { ArrowRight: 1, ArrowLeft: -1 }[e.key];
+    if (!step) return;
+    e.preventDefault();
+    const current = galleryTabs.findIndex((tab) => tab.getAttribute("aria-selected") === "true");
+    showShot((current + step + galleryTabs.length) % galleryTabs.length, true);
+});
+const openGallery = () => {
+    if (gallery.open) return;
+    // Nothing loads before the gallery is opened; then all three load at once, so a
+    // tab never shows an empty frame while its picture arrives.
+    gallery.querySelectorAll("img").forEach((img) => { img.loading = "eager"; });
+    gallery.showModal();
+};
+document.querySelectorAll('a[href="#screenshots"]').forEach((a) => {
+    a.addEventListener("click", (e) => { e.preventDefault(); openGallery(); });
+});
+gallery.querySelector(".gallery-close").addEventListener("click", () => gallery.close());
+gallery.addEventListener("click", (e) => { if (e.target === gallery) gallery.close(); });
+gallery.addEventListener("close", () => {
+    if (location.hash === "#screenshots") history.replaceState(null, "", location.pathname + location.search);
+});
+if (location.hash === "#screenshots") openGallery();
+
 document.getElementById("year").textContent = new Date().getFullYear();
