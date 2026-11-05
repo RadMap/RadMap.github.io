@@ -60,7 +60,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link href="./style.css" rel="stylesheet">
+    <!-- ?v= names the change: a browser holding an older copy fetches the new one.
+         Bump it with every change to the file. -->
+    <link href="./style.css?v=2026-11-05.3" rel="stylesheet">
     <script>
       // Apply a saved theme before first paint to avoid a flash.
       try {
@@ -68,7 +70,7 @@
         if (saved) document.documentElement.dataset.theme = saved;
       } catch (e) {}
     </script>
-    <script src="./index.js" defer></script>
+    <script src="./index.js?v=2026-11-05.3" defer></script>
   </head>
   <body>
 
@@ -85,6 +87,7 @@
           <a href="#licensing">Licensing</a>
           <a href="#faq">FAQ</a>
           <a href="#support">Support</a>
+          <a href="#screenshots">Screenshots</a>
           <a href="https://radmap.tech/documentation/latest/" target="_blank" rel="noopener noreferrer">Docs <span aria-hidden="true">↗</span></a>
         </nav>
         <div class="nav-actions">
@@ -435,6 +438,38 @@
         </div>
       </section>
     </main>
+
+    <!-- SCREENSHOTS: a gallery over the page, opened from the menu, or by #screenshots in
+         the address (index.js).  The app has a light theme only, so the pictures are the
+         same in both of the page's themes.  Their images load only when shown. -->
+    <dialog id="screenshots" class="gallery" aria-labelledby="gallery-title">
+      <div class="gallery-head">
+        <h2 id="gallery-title">Screenshots</h2>
+        <div class="gallery-tabs" role="tablist" aria-label="Screenshots">
+          <button type="button" role="tab" id="gallery-tab-1" aria-controls="gallery-shot-1" aria-selected="true">Main window</button>
+          <button type="button" role="tab" id="gallery-tab-2" aria-controls="gallery-shot-2" aria-selected="false" tabindex="-1">Material editor</button>
+          <button type="button" role="tab" id="gallery-tab-3" aria-controls="gallery-shot-3" aria-selected="false" tabindex="-1">Report</button>
+        </div>
+        <button type="button" class="icon-btn gallery-close" aria-label="Close screenshots">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+      <figure class="gallery-shot" role="tabpanel" id="gallery-shot-1" aria-labelledby="gallery-tab-1">
+        <img src="./images/radmap-main.png" width="1920" height="1008" loading="lazy" decoding="async"
+             alt="RadMap's main window: the geometry tree of a shielded Mössbauer setup, its six dose maps and its source, the properties of the selected dose map with its effective dose rate of 4.40e-04 ± 5.76e-06 Sv/h, and the setup in the 3D view.">
+        <figcaption>A shielded Mössbauer setup: lead and steel shields, a collimator and a detector, with six dose maps around it. The selected map shows its dose rate with its uncertainty.</figcaption>
+      </figure>
+      <figure class="gallery-shot" role="tabpanel" id="gallery-shot-2" aria-labelledby="gallery-tab-2" hidden>
+        <img src="./images/radmap-materials.png" width="843" height="901" loading="lazy" decoding="async"
+             alt="The material editor showing iron-ore-concrete, density 3.80 g/cm³, as a material mix by mass fraction: Fe 0.5, O 0.2, CONCRETE 0.175 and WATER 0.125.">
+        <figcaption>A material mixed from other materials by mass fraction: concrete with iron ore.</figcaption>
+      </figure>
+      <figure class="gallery-shot" role="tabpanel" id="gallery-shot-3" aria-labelledby="gallery-tab-3" hidden>
+        <img src="./images/radmap-report.png" width="1200" height="1029" loading="lazy" decoding="async"
+             alt="The first page of a RadMap PDF report: the project name, RadMap version, date and run ID, the number of primary particles, and tables of the dose maps with their dose rates, the source and the data sources.">
+        <figcaption>The first page of the PDF report: the run, every dose map with its dose rate and uncertainty, the sources and the publications behind the numbers.</figcaption>
+      </figure>
+    </dialog>
 
     <footer class="footer">
       <div class="container footer-inner">
